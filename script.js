@@ -10,23 +10,24 @@ function updateTime() {
 
     console.log('updateTime');
     var currentHour = dayjs().hour();
-
-    $('.time-block').each(function (index, element) {
-
-      var hour = $(element).attr('data-hour');
-      console.log(hour, currentHour);
-
-      if(hour < currentHour) {
-        $(element).find('.descrition').addClass('past');
-      }
-      else if (hour == currentHour) {
-        $(element).find('.description').addClass('present');
-      }
-      else {
-        $(element).find('.description').addClass('future');
-      }
-    });
 }
+    // $('.time-block').each(function (index, element) {
+
+    //   var hour = $(element).attr('data-hour');
+    //   console.log(hour, currentHour);
+
+    //   if(hour < currentHour) {
+    //     $(element).find('.descrition').addClass('past');
+    //   }
+    //   else if (hour == currentHour) {
+    //     $(element).find('.description').addClass('present');
+    //   }
+    //   else {
+    //     $(element).find('.description').addClass('future');
+    //   }
+//     });
+// }
+// bug in this section ..................................................................
 
 function onSaveToDo(event) {
 
