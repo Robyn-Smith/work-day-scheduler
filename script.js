@@ -27,6 +27,16 @@ function updateTime() {
       }
     });
 }
+
+function onSaveToDo(event) {
+
+  var hour = $(event.target).parent().parent().attr('data-hour');
+  var task = $(event.target).parent().prev().children().val();
+
+  localStorage.setItem(hour, task);
+
+  console.log('saved')
+}
 // $(function () {
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
