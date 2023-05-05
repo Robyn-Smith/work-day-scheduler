@@ -32,9 +32,9 @@ function updateTime() {
 function onSaveToDo(event) {
 
   var hour = $(event.target).parent().parent().attr('data-hour');
-  var task = $(event.target).parent().prev().children().val();
+  var toDo = $(event.target).parent().prev().children().val();
 
-  localStorage.setItem(hour, task);
+  localStorage.setItem(hour, toDo);
 
   console.log('saved')
 }
@@ -43,7 +43,7 @@ function createList() {
 
   for (hour = options.firstHour; hour <= options.lastHour; hour++) {
 
-    // load the task from local storage - jsn comment
+    // load the toDo from local storage - jsn comment
     var savedToDo = localStorage.getItem(hour) || '';
     var html = `<div class="row" data-hour="${hour}">
         <div class="col-sm-2 hour">${hour}</div>
