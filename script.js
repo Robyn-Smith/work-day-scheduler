@@ -57,6 +57,31 @@ function createList() {
       $('.container').append(html);
   }
 }
+
+function init() {
+  //load in the time slots -jsn comment- change to - add in list
+    createList();
+
+    //update the timeslot's background colours based on the times of day - jsn comment
+    updateTime();
+
+    //Set up the save button - jsn comment
+    $('.saveBtn').on('click', onSaveToDo);
+
+    //Set the current day - jsn comment
+    var currentDay = dayjs().format('dddd MMMM D YYYY, h:mm:ss a');
+    $('#currentDay').text(currentDay);
+
+    //Set up the Time poller - jsn comment
+    setInterval(function(){
+      updateTime();
+    }, 10000);
+}
+
+init();
+
+
+
 // $(function () {
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
