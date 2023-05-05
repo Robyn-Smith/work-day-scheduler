@@ -37,6 +37,26 @@ function onSaveToDo(event) {
 
   console.log('saved')
 }
+
+function createList() {
+
+  for (hour = options.firstHour; hour <= options.lastHour; hour++) {
+
+    // load the task from local storage - jsn comment
+    var savedToDo = localStorage.getItem(hour) || '';
+    var html = `<div class="row" data-hour="${hour}">
+        <div class="col-sm-2 hour">${hour}</div>
+        <div class="col-sm-8 row past">
+            <textarea class="col-md-10 description">${savedToDo}</textarea>
+        </div>
+        <div class="col-sm-2">
+            <button class="btn btn-primary saveBtn">Save</button>
+        </div>
+      </div>`
+
+      $('.container').append(html);
+  }
+}
 // $(function () {
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
