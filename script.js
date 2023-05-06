@@ -70,7 +70,7 @@ function init() {
     $('.saveBtn').on('click', onSaveToDo);
 
     //Set the current day - jsn comment
-    var currentDay = dayjs().format('dddd MMMM D YYYY, h:mm:ss a');
+    var currentDay = dayjs().format('dddd D MMMM YYYY, h:mm:ss a');
     $('#currentDay').text(currentDay);
 
     //Set up the Time poller - jsn comment
