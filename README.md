@@ -35,4 +35,4 @@ THEN the saved events persist
 ```
 ## Description
 
-This project uses JavaScript, CSS and html code to create a helpful day schedule that can be used to plan and organise time. This is a useful website for all users to better manage their time and daily routines. The current date and time is diplayed
+This project uses JavaScript, CSS and html code to create a helpful day schedule that can be used to plan and organise time. This is a useful website for all users to better manage their time and daily routines. The current date and time is diplayed in the header so that the user is reminded what the current date and time is and so they know what date they are planning for. 

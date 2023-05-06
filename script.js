@@ -29,6 +29,8 @@ function updateTime() {
 // }
 // bug in this section ..................................................................
 
+//add before 12 midday "am" and after 12 midday "pm".................................................
+
 function onSaveToDo(event) {
 
   var hour = $(event.target).parent().parent().attr('data-hour');
