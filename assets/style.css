@@ -16,13 +16,15 @@ textarea {
   white-space: pre-wrap;
 }
 
-.time-block {
+/* .time-block {
   border-radius: 15px;
-}
+} */
 
 .row {
   border-top: 1px solid white;
-}
+  /* border-radius: 15px;
+  margin: 0.2px; */
+} 
 
 .hour {
   background-color: #ffffff;
