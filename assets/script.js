@@ -63,9 +63,9 @@ $('.hour').each (function(index, element){
   var hour = $(element).attr('id');
   console.log(hour)
   if (hour >= 0 && hour <= 12) {
-    timeText = "am";
+    timeText = ":00 am";
   } else {
-    timeText = "pm";
+    timeText = ":00 pm";
   }
   $(this).text(hour + timeText);
   console.log('AM PM');
