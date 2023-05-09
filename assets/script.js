@@ -2,8 +2,8 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 var options = {
-    firstHour: 0,
-    lastHour: 24,
+    firstHour: 9,
+    lastHour: 20,
 }
 
 var currentHour = dayjs().hour();
@@ -24,8 +24,8 @@ function createBlock() {
 
     // load the toDo from local storage - jsn comment
     var savedToDo = localStorage.getItem(hour) || '';
-    var html = `<div class="row" data-hour="${hour}">
-        <div class="col-sm-2 hour">${hour}</div>
+    var html = `<div class="row" data-hour = "${hour}">
+        <div class="col-sm-2 hour"id="${hour}">${hour}</div>
         <div class="col-sm-8 row past">
             <textarea class="col-md-10 description">${savedToDo}</textarea>
         </div>
@@ -89,7 +89,9 @@ function createBlock() {
 //need to find data-hour class and loop through all checking if it is past present or future....................
 function hourCheck() {
 // var test = parseInt($(this).attr('data-hour').split('data-hour')[1]);
-var test = $('.data-hour').each
+$('.hour').each (function (){
+  var test = parseInt($(this).attr("id"))
+  console.log(test)
 
   if (test < currentHour) {
     $(this).addClass('past');
@@ -101,20 +103,20 @@ var test = $('.data-hour').each
     $(this).removeClass('present');
     $(this).addClass('future');
 console.log('hour check')
-}}
-
+}})}
 //need to add 'am' and 'pm' text after data-hour NOT WORKING .........................................
 
 function amPm () {
-$('.data-hour').each (function(index, element){
+$('.hour').each (function(index, element){
   var timeText ="";
-  var hour = $(element).attr('data-hour');
+  var hour = $(element).attr('id');
+  console.log(hour)
   if (hour >= 0 && hour <= 12) {
     timeText = "am";
   } else {
     timeText = "pm";
   }
-  $('.data-hour').text(hour + timeText);
+  $(this).text(hour + timeText);
   console.log('AM PM');
 })  
 }
