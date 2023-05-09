@@ -3,7 +3,7 @@
 // in the html.
 var options = {
     firstHour: 9,
-    lastHour: 20,
+    lastHour: 24,
 }
 
 var currentHour = dayjs().hour();
