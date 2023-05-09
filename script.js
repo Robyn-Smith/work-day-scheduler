@@ -2,34 +2,59 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 var options = {
-    firstHour: 8,
-    lastHour: 23,
+    firstHour: 0,
+    lastHour: 24,
 }
 
-function updateTime() {
+// function updateTime() {
 
-    console.log('updateTime');
-    var currentHour = dayjs().hour();
-}
-    // $('.time-block').each(function (index, element) {
+//     console.log('updateTime');
+//     var currentHour = dayjs().hour();
+//     $('.time-block').each(function (index, element) {
 
-    //   var hour = $(element).attr('data-hour');
-    //   console.log(hour, currentHour);
+//       var hour = $(element).attr('data-hour');
+//       console.log(hour, currentHour);
 
-    //   if(hour < currentHour) {
-    //     $(element).find('.descrition').addClass('past');
-    //   }
-    //   else if (hour == currentHour) {
-    //     $(element).find('.description').addClass('present');
-    //   }
-    //   else {
-    //     $(element).find('.description').addClass('future');
-    //   }
+//       if(hour < currentHour) {
+//         $(element).find('.description').addClass('past');
+//       }
+//       else if (hour == currentHour) {
+//         $(element).find('.description').addClass('present');
+//       }
+//       else {
+//         $(element).find('.description').addClass('future');
+//       }
 //     });
 // }
 // bug in this section ..................................................................
 
 //add before 12 midday "am" and after 12 midday "pm".................................................
+
+function hourCheck() {
+  var currentHour = dayjs().hour();
+
+  console.log('hourcheck 1', currentHour);
+
+  $('.data-hour').each(function () {
+    var timeBlockHour = parseInt($(this).attr('data-hour').split('data-hour')[1]);
+    console.log('hourcheck 2');
+
+    if (timeBlockHour < currentHour) {
+      $(this).addClass('past');
+    } else if (timeBlockHour === currentHour) {
+      $(this).removeClass('past');
+      $(this).addClass('present');
+    } else {
+      $(this).removeClass('past');
+      $(this).removeClass('present');
+      $(this).addClass('future');
+    }
+    console.log(timeBlockHour);
+    console.log('hourCheck');
+  });
+}
+
+
 
 function onSaveToDo(event) {
 
@@ -61,12 +86,23 @@ function createList() {
   }
 }
 
+// var blockHour= $('<div>').attr('col-sm-2 hour')
+// var timeText = "";
+// if (hour >= 0 && hour <= 12) {
+//   timeText = "am";
+// }
+// else {
+//   timeText = "pm";
+// }
+// blockHour.text(hour + timeText);
+
 function init() {
   //load in the time slots -jsn comment- change to - add in list
     createList();
 
     //update the timeslot's background colours based on the times of day - jsn comment
-    updateTime();
+    // updateTime();
+    hourCheck();
 
     //Set up the save button - jsn comment
     $('.saveBtn').on('click', onSaveToDo);
@@ -77,7 +113,8 @@ function init() {
 
     //Set up the Time poller - jsn comment
     setInterval(function(){
-      updateTime();
+      hourCheck();
+      // updateTime();
     }, 10000);
 }
 

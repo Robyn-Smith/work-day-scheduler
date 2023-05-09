@@ -1,38 +1,15 @@
 # work-day-scheduler
 
-## Your Task
-
-Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
-
-You'll need to use the [Day.js](https://day.js.org/en/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Day.js in the browser.
-
-## User Story
-
-```md
-AS AN employee with a busy schedule
-I WANT to add important events to a daily planner
-SO THAT I can manage my time effectively
-```
-
-## Acceptance Criteria
-
-```md
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours
-WHEN I view the timeblocks for that day
-
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-
-THEN I can enter an event
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-```
 ## Description
 
-This project uses JavaScript, CSS and html code to create a helpful day schedule that can be used to plan and organise time. This is a useful website for all users to better manage their time and daily routines. The current date and time is diplayed in the header so that the user is reminded what the current date and time is and so they know what date they are planning for. 
+This project uses JavaScript, CSS and html code to create a helpful day schedule that can be used to plan and organise time. This is a useful website for all users to better manage their time and daily routines. The current date and time is diplayed in the header so that the user is reminded what day they are planning for and how much time they have left in the day. This is presentented in blocks with the current buisness hour on the left, an area to input their own text in the middle adjacent to the corresponding time and a save button on the right. The user enters their plans/events and routines into the day schedulor and if they wish to save these plans they click the save button on the right. Once saved the user can refresh the page and their plans will still be visable as the events were saved in local storage. If a user wishes to remove or edit their plans they can retype or remove their text in the input area and save their changes again. 
+
+-The save button is decorated with an icon so that it is more inclusive and noticable for users.
+-The colour of each time block indicates whether the block is in the past present or future. If the time of the event is in the past the block is grey, if it is in present the block is red in colour and if it is in the future it is displayed in green.
+
+As seen in the image below:
+
+![Add alt text](/assets/screenshot-quiz.png)
+
+A link to the deployed webpage:
+
