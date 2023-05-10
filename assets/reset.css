@@ -1,0 +1,56 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+  }
+  
+  header {
+    background-color: rgba(0, 255, 255, 0.473);
+  }
+  
+  textarea {
+    background: transparent;
+    border: none;
+    resize: none;
+    color: #000000;
+    padding: 10px;
+    background-color: rgba(0, 255, 255, 0.473);
+    border-radius: 5px;
+    margin: 5px;
+  }
+  
+  .description {
+    white-space: pre-wrap;
+  }
+  
+  .hour {
+  margin:2px;
+  border-radius: 5%;
+  }
+  
+  .past {
+    background-color: #d3d3d3;
+    color: rgb(3, 0, 0);
+  }
+  
+  .present {
+    background-color: #ff6961;
+    color: white;
+  }
+  
+  .future {
+    background-color: #77dd77;
+    color: white;
+  }
+  
+  .saveBtn {
+    border-radius: 5px;
+    background-color: #06aed5;
+    color: white;
+    width: 100%;
+  }
+  
+  .saveBtn i:hover {
+    font-size: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  
