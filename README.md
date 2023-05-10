@@ -2,7 +2,9 @@
 
 ## Description
 
-This project uses JavaScript, CSS and html code to create a helpful day schedule that can be used to plan and organise time. This is a useful website for all users to better manage their time and daily routines. The current date is diplayed in the header so that the user is reminded what day they are planning for. This is presentented in blocks with the current buisness hour on the left, an area to input their own text in the middle adjacent to the corresponding time and a save button on the right. The user enters their plans/events and routines into the day schedulor and if they wish to save these plans they click the save button on the right. Once saved the user can refresh the page and their plans will still be visable as the events were saved in local storage. If a user wishes to remove or edit their plans they can retype or remove their text in the input area and save their changes again. The colour of each time block indicates whether the block is in the past present or future. If the time of the event is in the past the block is grey, if it is in present the block is red in colour and if it is in the future it is displayed in green.
+This project uses JavaScript, CSS and html code to create a helpful day schedule that can be used to plan and organise time. This is a useful website for all users to better manage their time and daily routines. When a user opens this webpage they are presented with a descriptive title, a blue header, a large heading and subheading giving more information to the reader, a colourful background and a selection of office hour time slots with blue text boxes and save buttons adjacent.
+
+The current date is diplayed in the header so that the user is reminded what day they are planning for. This is presentented in blocks with the current buisness hour on the left, an area to input their own text in the middle adjacent to the corresponding time and a save button on the right. The user enters their plans/events and routines into the day schedulor and if they wish to save these plans they click the save button on the right. Once saved the user can refresh the page and their plans will still be visable as the events were saved in local storage. If a user wishes to remove or edit their plans they can retype or remove their text in the input area and save their changes again. The colour of each time block indicates whether the block is in the past present or future. If the time of the event is in the past the block is grey, if it is in present the block is red in colour and if it is in the future it is displayed in green.
 -responsive
 -jquery
 -colourful background
@@ -11,7 +13,7 @@ This project uses JavaScript, CSS and html code to create a helpful day schedule
 
 As seen in the image below:
 
-![Add alt text](/assets/screenshot-quiz.png)
+![A screenshot of the Work Day Scheduler webpage, including a blue header, a large heading, a subheading, the current date, a colourful background, blue text boxes and blue save buttons](/assets/images/screenshot.png)
 
 A link to the deployed webpage:
 
