@@ -10,7 +10,7 @@ This website is very simple to use. The user enters their plans/events and routi
 
 The website is responsive to changes in screen size to support user experience, inclusion and allow users to clearly see the website from any device. CSS styling was also used to make the website more visually appealing and so that it is easier see which text box they are clicking or button they are hovering over. In the pictures below the 9:00 am text box has been selected which is made clear by the black border and the first save button is a darker shade of blue to show that the mouse is hovering over it.
 
-An image of the website taken at ........ with time blocks grey indicating they are in the past:
+An image of the website taken at 23:15pm with time blocks grey indicating they are in the past:
 
 ![A screenshot of the Work Day Scheduler webpage, including a blue header, a large heading, a subheading, the current date, a colourful background, blue text boxes and blue save buttons](/assets/images/screenshot.png)
 
