@@ -3,7 +3,7 @@
 // in the html.
 var clock = {
     firstHour: 9,
-    lastHour: 24,
+    lastHour: 17,
 }
 
 var currentHour = dayjs().hour();

@@ -8,11 +8,15 @@ jQuery was used within the JavaScript code of this project as it is a lightweigh
 
 This website is very simple to use. The user enters their plans/events and routines into the day schedulor and if they wish to save these plans they click the save button on the right. Once saved the user can refresh the page and their plans will still be visable as the events were saved in local storage. If a user wishes to remove or edit their plans they can retype or remove their text in the input area and save their changes again. 
 
-The website is responsive to changes in screen size to support user experience, inclusion and allow users to clearly see the website from any device. CSS styling was also used to make the website more visually appealing and so that it is easier see which text box they are clicking or button they are hovering over. In the picture below the 9:00 am text box has been selected which is made clear by the black border and the first save button is a darker shade of blue to show that the mouse is hovering over it.
+The website is responsive to changes in screen size to support user experience, inclusion and allow users to clearly see the website from any device. CSS styling was also used to make the website more visually appealing and so that it is easier see which text box they are clicking or button they are hovering over. In the pictures below the 9:00 am text box has been selected which is made clear by the black border and the first save button is a darker shade of blue to show that the mouse is hovering over it.
 
-As seen in the image below:
+An image of the website taken at ........ with time blocks grey indicating they are in the past:
 
 ![A screenshot of the Work Day Scheduler webpage, including a blue header, a large heading, a subheading, the current date, a colourful background, blue text boxes and blue save buttons](/assets/images/screenshot.png)
+
+An image of the website taken at 00:18am with time blocks green indicating they are in the future:
+
+![A screenshot of the Work Day Scheduler webpage, including a blue header, a large heading, a subheading, the current date, a colourful background, blue text boxes and blue save buttons](/assets/images/screenshot2.png)
 
 A link to the deployed webpage:
 
