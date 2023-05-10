@@ -1,3 +1,4 @@
+/*reset style sheet added as a default incase of errors in loading the style sheet*/
 body {
     font-family: 'Open Sans', sans-serif;
     font-size: 16px;
