@@ -6,6 +6,7 @@ var firstHour = 0;
 var lastHour = 17;
 //global variables accessiable by all code
 //first hour set at 9:00am and last hour set at 17:00 to represent average office hours.
+//current hour found using jQuery dayjs api
 
 function createBlock() {
   for (hour = firstHour; hour <= lastHour; hour++) {
@@ -37,16 +38,16 @@ function onSaveToDo(event) {
   localStorage.setItem(hour, toDo);
   console.log('saved event');
 }
-//this function 
+//this function ................................................................
 
 function hourCheck() {
 $('.hour').each (function (){
-  var test = parseInt($(this).attr("id"))
-  console.log(test)
+  var officeHour = parseInt($(this).attr("id"))
+  console.log(officeHour)
 
-  if (test < currentHour) {
+  if (officeHour < currentHour) {
     $(this).addClass('past');
-  }else if (test === currentHour) {
+  }else if (officeHour === currentHour) {
     $(this).removeClass('past');
     $(this).addClass('present');
  } else {
@@ -55,7 +56,14 @@ $('.hour').each (function (){
     $(this).addClass('future');
 console.log('hour check')
 }})}
-//need to find time-hour class and loop through all checking if it is past present or future
+//This function find's the hour class in the html, added via javascript, in createBlock function, and uses .each to 
+//loop through all office hours checking if it is past present or future using an if statement. The variable 
+//officeHour is created to turn the "hour" string into a number and is found using 'this' and calling it by its 
+//attribute 'id'. Once the office hour is assigned to the officeHour variable it is compared with the current hour. 
+//The if statement says that if the officeHour is smaller than the current hour it is in the past add adds the past 
+//class to it. If the officeHour is equal to the currentHour it removes the past class and adds the present class.
+//If the office hour is not smaller than or equal to the currentHour it removes past or present class and adds the 
+//future class. Console.log was used to check the functionality of the code.
 
 function amPm () {
 $('.hour').each (function(index, element){
@@ -71,7 +79,11 @@ $('.hour').each (function(index, element){
   console.log('AM PM');
 })  
 }
-//need to add 'am' and 'pm' text after time-hour
+//This function finds the hour class and loops through all office hours assigning text ":00am" or ":00pm" 
+//depending on whether the office hour is greater than or equal to 0, representing midnight. Or smaller than 
+//or equal to 12, representing midday. It finds the hour element by its id attribute and assigns it to the 
+//variable hour. The variable timeText is also created and declared as a string. The hour and timeText 
+//variables are added together, then added to the 'this' refering to each office hour.
 
 function init() {
   //load in the time slots -jsn comment- change to - add in list
