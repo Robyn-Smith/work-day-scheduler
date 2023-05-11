@@ -6,6 +6,7 @@ body {
 header {
   background-color: rgba(0, 255, 255, 0.473);
 }
+/* customised to suit my own preferences */
 
 textarea {
   background: transparent;
@@ -16,7 +17,7 @@ textarea {
   background-color: rgba(0, 255, 255, 0.473);
   border-radius: 5px;
   margin: 5px;
-}
+}/* changed to suit my own preferences */
 
 .description {
   white-space: pre-wrap;
@@ -47,7 +48,7 @@ border-radius: 5%;
   background-color: #06aed5;
   color: white;
   width: 100%;
-}
+}/* changed to suit my own preferences */
 
 .saveBtn i:hover {
   font-size: 20px;

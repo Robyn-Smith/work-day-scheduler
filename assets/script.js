@@ -2,7 +2,7 @@
 //the browser has finished rendering all the elements in the html.
 
 var currentHour = dayjs().hour();
-var firstHour = 0;
+var firstHour = 9;
 var lastHour = 17;
 //global variables accessiable by all code
 //first hour set at 9:00am and last hour set at 17:00 to represent average office hours.
@@ -30,15 +30,6 @@ function createBlock() {
 //the hours until all div elements are created for every hour leading up to 17:00pm, office hours.
 //Bootstrap is used with a class of row to add rows to the container and col-* classes for different column 
 //sizes on different screens.
-
-function onSaveToDo(event) {
-  var hour = $(event.target).parent().parent().attr('time-hour');
-  var toDo = $(event.target).parent().prev().children().val();
-
-  localStorage.setItem(hour, toDo);
-  console.log('saved event');
-}
-//this function ................................................................
 
 function hourCheck() {
 $('.hour').each (function (){
@@ -85,28 +76,52 @@ $('.hour').each (function(index, element){
 //variable hour. The variable timeText is also created and declared as a string. The hour and timeText 
 //variables are added together, then added to the 'this' refering to each office hour.
 
+function onSaveToDo(event) {
+  var hour = $(event.target).parent().parent().attr('time-hour');
+  var toDo = $(event.target).parent().prev().children().val();
+
+  localStorage.setItem(hour, toDo);
+  console.log('saved event');
+}
+//This function creates the variable hour and gets the div html element, created in the createBlock function, by 
+//getting it's time-hour class attribute. It also creates the toDo function, named as such as the information 
+//entered is similiar to a to do list, and sets it as a value.
+//The event target refers to the button element that was clicked (the specific save button). It is necessary to use 
+//event.target when using an event listener, an event listener is used later in the code in the init function.
+//It stores the hour as the key and the toDo, users plan input, as the value in local storage. 
+//It then logs the string 'saved event' in the console to check if it is working.
+
 function init() {
-  //load in the time slots -jsn comment- change to - add in list
+
+  var currentDay = dayjs().format('dddd, D MMMM YYYY');
+  $('#currentDay').text(currentDay);  
+//This adds in the written current date in the header by getting the html element <p> by it's id "currentDay" 
+//and adding the text to it. 
+
     createBlock();
-
-    //update the timeslot's background colours based on the times of day - jsn comment
-    // updateTime();
     hourCheck();
-
     amPm();
 
-    //Set up the save button - jsn comment
     $('.saveBtn').on('click', onSaveToDo);
 
-    //Set the current day - jsn comment
-    var currentDay = dayjs().format('dddd, D MMMM YYYY');
-    $('#currentDay').text(currentDay);
-
-    //Set up the Time poller - jsn comment
     setInterval(function(){
       hourCheck();
-      // updateTime();
     }, 10000);
 }
 
 init();
+
+//init in jquery is a shorthand for initiate, this funtion calls all functions at the same time and is used at the 
+//bottom of the javascript page to avoid errors as it needs to use previous code.
+
+//createBlock() -loads in the html time blocks, including the office hour, text box and save button.  
+
+//hourCheck() -Updates the background and text colour of the office hours block to indicate if it is past present 
+//or future, definded colours in css.
+
+//amPm() -checks whether the office hour is am or pm and adds the ":00am" or ":00pm" strings accordingly
+
+//$('.saveBtn').on('click', onSaveToDo); finds and adds event listener to the save button when it is clicked by the 
+//user.
+
+//setInterval(function() sets up the timer poller and updates the time every second
